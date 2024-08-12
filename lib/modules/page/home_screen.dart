@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: Color(0x2FF2464EC),
         // title: Text('Home Screen'),
       ),
       body: Stack(
@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: SingleChildScrollView(
               physics: const BouncingScrollPhysics(),
               child: Container(
-                color: Colors.blueAccent,
+                color: Color(0xFF2464EC),
                 width: MediaQuery.of(context).size.width,
                 height: 250,
                 child: Padding(
@@ -349,7 +349,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Text(
                         'Lihat Semua 58', // Ganti dengan teks yang sesuai
                         style: TextStyle(
-                          color: Colors.blue,
+                          color: Color(0x22FF2464EC),
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -377,12 +377,10 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         child: ClipRRect(
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30), 
-            topRight: Radius.circular(30),
           ),
           child: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
-            backgroundColor: Color(0xFF1E3A60), // Dark blue color
+            backgroundColor: Color(0xFF2464EC), // Dark blue color
             selectedItemColor: Colors.white,
             unselectedItemColor: Colors.grey[400],
             items: <BottomNavigationBarItem>[
