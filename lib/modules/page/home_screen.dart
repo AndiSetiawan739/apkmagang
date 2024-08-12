@@ -256,8 +256,8 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Scan QR',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.info),
-            label: 'Informasi',
+            icon: Icon(Icons.location_on),
+            label: 'Lokasi',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
