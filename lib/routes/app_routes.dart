@@ -1,6 +1,7 @@
 import 'package:apkmagang/modules/auth/forget_passwordscreen.dart';
 import 'package:apkmagang/modules/auth/login_screen.dart';
 import 'package:apkmagang/modules/auth/register_screen.dart';
+import 'package:apkmagang/modules/page/home_screen.dart';
 import 'package:apkmagang/modules/splash/splash_screen.dart';
 import 'package:get/get.dart';
 
@@ -9,6 +10,7 @@ class Routes {
   static String routeLogin = '/login';
   static String routeForgetPassword = '/forget-password';
   static String routeRegister = '/register';
+  static String routeHome = '/home';
 }
 
 AppRoutes() => [
@@ -32,5 +34,10 @@ AppRoutes() => [
       GetPage(
           name: Routes.routeRegister,
           page: () => const RegisterScreen(),
+          transition: Transition.fade),
+
+      GetPage(
+          name: Routes.routeHome,
+          page: () => const HomeScreen(),
           transition: Transition.fade),
     ];
