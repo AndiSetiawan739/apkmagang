@@ -1,7 +1,7 @@
 import 'package:apkmagang/controller/user/user_controller.dart';
 import 'package:apkmagang/gen/assets.gen.dart';
 import 'package:apkmagang/routes/app_routes.dart';
-import 'package:apkmagang/utils/app_utils.dart';
+
 import 'package:apkmagang/utils/constant.dart';
 import 'package:apkmagang/widgets/button/form_input_button.dart';
 import 'package:apkmagang/widgets/textfields/form_input_textfield.dart';
@@ -140,9 +140,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   FormInputButton(
                     text: 'Login',
                     onClick: () {
-                      AppUtils().snackBarShow(
-                          message:
-                              'Email: ${usernameInputController.text}, \nPassword: ${passwordInputController.text}');
+                      Get.toNamed(Routes.routeHome);
                     },
                   ),
 
