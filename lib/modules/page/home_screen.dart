@@ -1,4 +1,5 @@
 import 'package:apkmagang/gen/assets.gen.dart';
+import 'package:apkmagang/utils/constant.dart';
 
 import 'package:flutter/material.dart';
 
@@ -224,6 +225,126 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Text(
                           "Keren! Kamu lebih cepat 8 menit bulan ini!",
                           style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+
+          SizedBox(
+            height: setHeight(200),
+          ),
+
+          Positioned(
+            //nomor 2
+            top: MediaQuery.of(context).size.height * 0.5,
+            left: MediaQuery.of(context).size.width * 0.05,
+            child: Container(
+              width: MediaQuery.of(context).size.width * 0.9,
+              height: 200,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(10.0),
+                  topRight: Radius.circular(10.0),
+                  bottomLeft: Radius.circular(0.0),
+                  bottomRight: Radius.circular(0.0),
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.3),
+                    spreadRadius: 4,
+                    blurRadius: 5,
+                    offset: const Offset(0, 3),
+                  ),
+                ],
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      '01 Agustus 2024',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Expanded(
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount:
+                            6, // Sesuaikan dengan jumlah item yang kamu miliki
+                        itemBuilder: (context, index) {
+                          return Container(
+                            width: 80,
+                            margin: const EdgeInsets.only(right: 10),
+                            child: Column(
+                              children: [
+                                Stack(
+                                  children: [
+                                    CircleAvatar(
+                                      radius: 30,
+                                      backgroundImage: NetworkImage(
+                                        'https://example.com/avatar.jpg', // Ganti dengan URL gambar yang sesuai
+                                      ),
+                                    ),
+                                    Positioned(
+                                      right: 0,
+                                      child: Container(
+                                        padding: const EdgeInsets.all(3),
+                                        decoration: BoxDecoration(
+                                          color: Colors.green,
+                                          shape: BoxShape.circle,
+                                        ),
+                                        child: Text(
+                                          '10', // Ganti dengan angka yang sesuai
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 12,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 5),
+                                Text(
+                                  'WFO', // Ganti dengan status yang sesuai
+                                  style: TextStyle(
+                                    color: Colors.green,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  'Muhammad', // Ganti dengan nama yang sesuai
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  '06:50', // Ganti dengan waktu yang sesuai
+                                  style: TextStyle(
+                                    color: Colors.green,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        'Lihat Semua 58', // Ganti dengan teks yang sesuai
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
